@@ -1,3 +1,8 @@
+/*
+* Crackme created by Caitlin Coffey and Zoe McGinnis 
+* 
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
