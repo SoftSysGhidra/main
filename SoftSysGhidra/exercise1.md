@@ -56,4 +56,6 @@ and the stack.
 Now that we've learned more about the limitations of Ghidra, we can use Ghidra
 to solve a CrackMe exercise!
 
+- Leave Figure Ghidra stuff to the end
+
 ### TODO write
