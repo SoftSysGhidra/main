@@ -10,19 +10,18 @@ recognizing variable types and function return types.
 1) Read through *Think Reverse Engineering* to install Ghidra, become familiar with
 the layout of Ghidra, and get a sense of some the limitations of decompilers.
 
-2) Run `gcc trouble_with_types.c -o trouble_with_types` to compile
-the .c file onto your machine. You can run it and look at the source code
-as well to get a sense of what's going on.
+2) Run `gcc trouble_with_types.c -o trouble_with_types` to get the executable file.
+You can run it and look at the source code as well to get a sense of what's going on.
 
 3) Create a new Ghidra project (if you haven't done so already) and name it
-whatever you'd like (we suggest a short, memorable name). Once you create your
-project, click on the Dragon icon under the Tool Chest to open the CodeBrowser program.
+whatever you'd like (we suggest a short, memorable name).
 
-4) In the CodeBrowser program, click on 'File' and 'Import File' to import the
+4) Once you've created your project, go to 'File' and 'Import File' to import the
 newly-created executable file `trouble_with_types`. If you import the .c file,
 it will be less fun!
 
-5) Use the Functions window and the Decompiler window to take a look at how
+5) Click on the green dragon icon to go to the CodeBrowser. In CodeBrowser, use
+the Functions window and the Decompiler window to take a look at how
 Ghidra recreated `main()`. What looks the same? What looks different?
 
 6) Use the Functions window and the Decompiler window to take a look at the functions
@@ -56,6 +55,21 @@ and the stack.
 Now that we've learned more about the limitations of Ghidra, we can use Ghidra
 to solve a CrackMe exercise!
 
-- Leave Figure Ghidra stuff to the end
+CrackMe exercises are common software reverse engineering exercises where one
+finds a password or a 'flag' from the executable file.
 
-### TODO write
+You might ask, how will I know when I've found the flag? In our example, the flag
+will be the password that the program is looking for (in other words, it is the string
+  that the user can input which will move past the 'Enter Password' dialogue).
+
+1) Go to the exercise_crackme folder in the SoftSysGhidra repository (using `cd .. && cd exercise_crackme`).
+
+2) Run `gcc crackme.c -o crackme` to get the executable file. Optionally, you can
+use the executable files in the exercise_crackme folder and skip this step.
+
+3) Open Ghidra, and using either a new project or an existing project, go to 'File'
+and import the executable file (should be named `crackme`).
+
+4) When you think you've found the flag, try running the executable file and
+see if it's what the program is looking for. If the password is correct, congrats!
+If it didn't work, try again!
