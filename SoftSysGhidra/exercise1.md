@@ -17,12 +17,13 @@ You can run it and look at the source code as well to get a sense of what's goin
 whatever you'd like (we suggest a short, memorable name).
 
 4) Once you've created your project, go to 'File' and 'Import File' to import the
-newly-created executable file `trouble_with_types`. If you import the .c file,
-it will be less fun!
+newly-created executable file `trouble_with_types`. If you import the .c file
+into Ghidra, it will be less fun!
 
 5) Click on the green dragon icon to go to the CodeBrowser. In CodeBrowser, use
 the Functions window and the Decompiler window to take a look at how
-Ghidra recreated `main()`. What looks the same? What looks different?
+Ghidra recreated `main()`. Open trouble_with_types.c (the source file) in a
+text editor or view it in the terminal. What looks the same? What looks different?
 
 6) Use the Functions window and the Decompiler window to take a look at the functions
 that `main()` calls. What are some of the similarities between how Ghidra interpreted
@@ -43,7 +44,27 @@ If you get stuck, Google is your friend.
 The goal of this exercise is to explore to another one of the limitations of Ghidra:
 it's somewhat bad at recreating the original syntax of the control flow.
 
-### TODO write
+1) Run `gcc failing_the_flow.c -o failing_the_flow` to get the executable file.
+You can run it and/or look at the source code as well to get a sense of what's going on.
+
+2) Open Ghidra, and using either a new project or an existing project, go to 'File'
+and 'Import File' to upload the executable file (should be named `failing_the_flow`).
+
+3) Using the same tools as *Trouble with Types*, take a look at `main()`.
+Looking at the source code (failing_the_flow.c) in a different program (such as a
+  text editor like VSCode, or in the terminal), comment on some of the differences
+  you see.
+
+4) In 1-2 sentences, explain why Ghidra might interpret `for` loops as
+while loops.
+
+5) (Optional) In 3-4 sentences, explain why Ghidra produced a nested `if` statement
+in `failing_the_flow`.
+*Hint*: In CodeBrowser, go to 'Window' and select 'Function Graph', from there you
+can see the control flow diagram that Ghidra produced. Notice which assembly instructions
+it picked up on. If you get stuck, you can use the strings (such as 'That's not
+what I wanted you to say!') as an indicator of where you are in the program. You
+can also consult *Think Reverse Engineering*.
 
 ## Mysterious Memory Problems
 The goal of this exercise is to explore how Ghidra recognizes data in the heap
