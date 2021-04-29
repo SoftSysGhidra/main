@@ -38,7 +38,6 @@ what a function is returning, but not recognize the function return type.
 - Hint: Walk through the steps of how decompilers recreate functions from the stack.
 If you get stuck, Google is your friend.
 
-### TODO double check that this isn't too hard/easy. Also make sure the hint was good enough.
 
 ## Failing the Flow
 The goal of this exercise is to explore to another one of the limitations of Ghidra:
@@ -60,7 +59,7 @@ while loops.
 
 5) (Optional) In 3-4 sentences, explain why Ghidra produced a nested `if` statement
 in `failing_the_flow`.
-*Hint*: In CodeBrowser, go to 'Window' and select 'Function Graph', from there you
+- Hint: In CodeBrowser, go to 'Window' and select 'Function Graph', from there you
 can see the control flow diagram that Ghidra produced. Notice which assembly instructions
 it picked up on. If you get stuck, you can use the strings (such as 'That's not
 what I wanted you to say!') as an indicator of where you are in the program. You
@@ -89,7 +88,7 @@ Why did we end up losing some information about our local variable in `stack()`?
 
 6) (Optional) Ghidra noticed that a variable assigned in globals exists, but
 where did Ghidra define it?
-Hint: You can hover over the variable to see where in the assembly instructions it
+- Hint: You can hover over the variable to see where in the assembly instructions it
 was defined.
 
 ## CrackMe Exercise
