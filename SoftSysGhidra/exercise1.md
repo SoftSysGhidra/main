@@ -67,10 +67,30 @@ what I wanted you to say!') as an indicator of where you are in the program. You
 can also consult *Think Reverse Engineering*.
 
 ## Mysterious Memory Problems
-The goal of this exercise is to explore how Ghidra recognizes data in the heap
-and the stack.
+The goal of this exercise is to explore how Ghidra recognizes data in memory.
 
-### TODO write
+1) Run `gcc mysterious_memory_problems.c -o mysterious_memory_problems` to get
+the executable file. I highly recommend looking at the source code
+(mysterious_memory_problems.c) for this exercise as well, in a text editor such as
+ VSCode or Atom.
+
+2) Open Ghidra, and using either a new project or an existing project, go to 'File'
+and 'Import File' to upload the executable file (should be named
+  `mysterious_memory_problems`).
+
+3) Looking briefly at `main()` and `stack()`, what are some of the differences
+you see between what Ghidra created and the actual source code?
+
+4) When we reallocate more memory to `*str` using `realloc()`, what happens? How
+does this relate to the way Ghidra interpreted what pointers were being used?
+
+5) In 2-3 sentences, explain what happens when Ghidra processes data on the stack.
+Why did we end up losing some information about our local variable in `stack()`?
+
+6) (Optional) Ghidra noticed that a variable assigned in globals exists, but
+where did Ghidra define it?
+Hint: You can hover over the variable to see where in the assembly instructions it
+was defined.
 
 ## CrackMe
 Now that we've learned more about the limitations of Ghidra, we can use Ghidra
@@ -79,7 +99,7 @@ to solve a CrackMe exercise!
 CrackMe exercises are common software reverse engineering exercises where one
 finds a password or a 'flag' from the executable file.
 
-You might ask, how will I know when I've found the flag? In our example, the flag
+You might ask yourself, "how will I know when I've found the flag"? In our example, the flag
 will be the password that the program is looking for (in other words, it is the string
   that the user can input which will move past the 'Enter Password' dialogue).
 
