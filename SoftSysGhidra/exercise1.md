@@ -7,7 +7,7 @@ We will also explore the limits of decompilers and solve a simple CrackMe exerci
 The goal of this exercise is to explore some of the limitations of Ghidra with
 recognizing variable types and function return types.
 
-1) Read through *Think Reverse Engineering* to install Ghidra, become familiar with
+1) Read through *Reverse Engineering with Ghidra* to install Ghidra, become familiar with
 the layout of Ghidra, and get a sense of some the limitations of decompilers.
 
 2) Run `gcc trouble_with_types.c -o trouble_with_types` to get the executable file.
@@ -26,16 +26,22 @@ Ghidra recreated `main()`. Open trouble_with_types.c (the source file) in a
 text editor or view it in the terminal. What looks the same? What looks different?
 
 6) Use the Functions window and the Decompiler window to take a look at the functions
-that `main()` calls. What are some of the similarities between how Ghidra interpreted
-these functions? What are some differences? (If you want to look at the source code,
-  aka `trouble_with_types.c`, feel free to).
+that `main()` calls (hint: there's 5 of them!). What are some of the similarities
+between how Ghidra interpreted these functions? What are some differences? (If
+  you want to look at the source code, aka `trouble_with_types.c`, feel free to).
 
 7) In 1-2 sentences, explain why Ghidra is generally bad at recreating
 function parameter names and types.
 
-8) (Optional) In a short paragraph, explain why Ghidra can sometimes recognize
+8) In 2-3 sentences, explain why Ghidra can sometimes recognize
 what a function is returning, but not recognize the function return type.
-- Hint: Walk through the steps of how decompilers recreate functions from the stack.
+
+9) (Optional) Decompilers can sometimes appear to be black-boxes. In this example, sometimes
+`multiple_params()` is shown to take three arguments in `main()`, but in the
+function definition, Ghidra defined it as having only two parameters,
+`int param1` and `int param2`. Briefly explain your theory/hypothesis as to why
+this might have happened.
+- Hint: It is usually unclear Walk through the steps of how decompilers recreate functions from the stack.
 If you get stuck, Google is your friend.
 
 
@@ -63,7 +69,7 @@ in `failing_the_flow`.
 can see the control flow diagram that Ghidra produced. Notice which assembly instructions
 it picked up on. If you get stuck, you can use the strings (such as 'That's not
 what I wanted you to say!') as an indicator of where you are in the program. You
-can also consult *Think Reverse Engineering*.
+can also consult *Reverse Engineering with Ghidra*.
 
 ## Mysterious Memory Problems
 The goal of this exercise is to explore how Ghidra recognizes data in memory.
