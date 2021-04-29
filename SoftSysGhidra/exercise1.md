@@ -1,6 +1,6 @@
 # Exercise 1: Getting Started with Ghidra
 
-This Exercise will introduce you to some of the most essential features of Ghidra.
+This exercise will introduce you to some of the most essential features of Ghidra.
 We will also explore the limits of decompilers and solve a simple CrackMe exercise.
 
 ## Trouble with Types
@@ -92,7 +92,7 @@ where did Ghidra define it?
 Hint: You can hover over the variable to see where in the assembly instructions it
 was defined.
 
-## CrackMe
+## CrackMe Exercise
 Now that we've learned more about the limitations of Ghidra, we can use Ghidra
 to solve a CrackMe exercise!
 
