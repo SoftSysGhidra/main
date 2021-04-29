@@ -63,7 +63,7 @@ Looking at the source code (failing_the_flow.c) in a different program (such as 
 4) In 1-2 sentences, explain why Ghidra might interpret `for` loops as
 while loops.
 
-5) (Optional) In 3-4 sentences, explain why Ghidra produced a nested `if` statement
+5) In 3-4 sentences, explain why Ghidra produced a nested `if` statement
 in `failing_the_flow`.
 - Hint: In CodeBrowser, go to 'Window' and select 'Function Graph', from there you
 can see the control flow diagram that Ghidra produced. Notice which assembly instructions
