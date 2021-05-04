@@ -1,7 +1,6 @@
 # Exercise 1: Getting Started with Ghidra
 
-This exercise will introduce you to some of the most essential features of Ghidra.
-We will also explore the limits of decompilers and solve a simple CrackMe exercise.
+This exercise will allow you to explore some of the limitations of a decompiler.
 
 ## Trouble with Types
 The goal of this exercise is to explore some of the limitations of Ghidra with
@@ -96,26 +95,3 @@ Why did we end up losing some information about our local variable in `stack()`?
 where did Ghidra define it?
 - Hint: You can hover over the variable to see where in the assembly instructions it
 was defined.
-
-## CrackMe Exercise
-Now that we've learned more about the limitations of Ghidra, we can use Ghidra
-to solve a CrackMe exercise!
-
-CrackMe exercises are common software reverse engineering exercises where one
-finds a password or a 'flag' from the executable file.
-
-You might ask yourself, "how will I know when I've found the flag"? In our example, the flag
-will be the password that the program is looking for (in other words, it is the string
-  that the user can input which will move past the 'Enter Password' dialogue).
-
-1) Go to the exercise_crackme folder in the SoftSysGhidra repository (using `cd .. && cd exercise_crackme`).
-
-2) Run `gcc crackme.c -o crackme` to get the executable file. Optionally, you can
-use the executable files in the exercise_crackme folder and skip this step.
-
-3) Open Ghidra, and using either a new project or an existing project, go to 'File'
-and import the executable file (should be named `crackme`).
-
-4) When you think you've found the flag, try running the executable file and
-see if it's what the program is looking for. If the password is correct, congrats!
-If it didn't work, try again!
