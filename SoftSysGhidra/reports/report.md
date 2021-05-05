@@ -3,8 +3,6 @@
 
 ## Links
 
----
-
 Website: [https://sites.google.com/view/ghidra-reverse-engineering/home](https://sites.google.com/view/ghidra-reverse-engineering/home)
 
 Zine: [https://docs.google.com/document/d/1uGDr5cft-I-VSU9sT8QRybdStJELB7Jgy5nTU16aZ1M/edit?usp=sharing](https://docs.google.com/document/d/1uGDr5cft-I-VSU9sT8QRybdStJELB7Jgy5nTU16aZ1M/edit?usp=sharing)
@@ -13,15 +11,11 @@ Exercises: [https://github.com/SoftSysGhidra/main](https://github.com/SoftSysGhi
 
 ## Background
 
----
-
 Ghidra is a reverse engineering tool developed by the National Security Administration. It is free and open source, making it accessible to those who are interested in reverse engineering.
 
 Our goal was to develop an educational resource for other reverse-engineering amateurs to reference when exploring Ghidra. What we produced is a resource that covers how decompilers work, how disassemblers work, how to use Ghidra, and how to analyze decompiled code. We originally planned to just make a [zine](https://docs.google.com/document/d/1uGDr5cft-I-VSU9sT8QRybdStJELB7Jgy5nTU16aZ1M/edit?usp=sharing), but we were able to go beyond our original goal and publish our information [on a website](https://sites.google.com/view/ghidra-reverse-engineering/home) as well. Our target audience for this resource is current (or former) Software Systems students. We recommend that the reader have a basic knowledge in C and the memory hierarchy.
 
 ## Learning Goals
-
----
 
 Collectively, our learning goals are to understand how Ghidra works and how to use it. Furthermore, we want to make Ghidra more accessible to students that are new to C and assembly coding.
 
@@ -29,8 +23,6 @@ Collectively, our learning goals are to understand how Ghidra works and how to u
 - Caitlin is interested in learning more about the process of how Ghidra decompiles an executable file and translates it into (somewhat) legible C code.
 
 ## Implementation
-
----
 
 ### Making the Educational Resource
 
@@ -121,8 +113,6 @@ While we could have just checked if the correct string were entered, we decided 
 
 ## Reflection
 
----
-
 Over the course of the project, we were able to meet all of our MVP requirements and several of our stretch goals. We would consider our project to be middle to upper-bound. 
 
 Our MVP was to create a fully developed educational resource with an example reverse engineering exercise for people to tackle. We wanted our resource to contain information about how Ghidra works, how to install Ghidra, how to use Ghidra, and how to analyze the decompiled code. Our educational resource covers all of these topics in detail.
@@ -132,8 +122,6 @@ Moving forward with our stretch goals, we managed to write enough information fo
 One stretch goal we did not get to was analyzing malware using Ghidra in a virtual machine. In the end, we opted to further build out the other sections of the educational resource such as the disassembler section and the features of Ghidra. We also wanted to spend time making our website.
 
 ## Resources
-
----
 
 Because of the depth of our educational resource, we ended up consulting several resources. We found Tsviatko Yovtchev's talk on how to build a decompiler particularly useful, as there was not a lot of information out there online beyond his video. The video is about 45 minutes long, but it could be fun to watch some of the highlights of it in Software Systems.
 
